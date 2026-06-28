@@ -16,34 +16,6 @@ Predicts which employees are at risk of leaving using a Logistic Regression mode
 
 ---
 
-## Run Locally
-
-```bash
-# 1. Clone the repo
-git clone https://github.com/yourusername/attritioniq.git
-cd attritioniq
-
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Run the app
-streamlit run app.py
-```
-
----
-
-## Deploy to Streamlit Cloud
-
-1. Push this folder to a GitHub repository
-2. Go to share.streamlit.io
-3. Click "New app"
-4. Select your repo → set Main file path to `app.py`
-5. Click Deploy
-
-That's it — your app will be live in under 2 minutes!
-
----
-
 ## Project Structure
 
 ```
@@ -70,7 +42,3 @@ attritioniq/
 - **Plotly** — interactive charts
 - **Pandas** — data handling
 - **Scikit-learn** — model (Logistic Regression)
-
----
-
-Built during Data Science Internship · Week 2 · June 2026
