@@ -46,5 +46,7 @@ def load_css():
     #MainMenu { visibility: hidden; }
     footer { visibility: hidden; }
     header { visibility: hidden; }
+    [data-testid="collapsedControl"] { display: none !important; }
+    section[data-testid="stSidebar"] > div { min-width: 200px !important; }
     </style>
     """, unsafe_allow_html=True)
