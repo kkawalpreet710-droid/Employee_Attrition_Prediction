@@ -7,10 +7,10 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-from views import landing, dashboard, predict, bulk_upload
-from utils.style import load_css
+import landing, dashboard, predict, bulk_upload
+import style
 
-load_css()
+style.load_css()
 
 PAGES = {
     "Home": landing,
