@@ -3,42 +3,42 @@ import streamlit as st
 def load_css():
     st.markdown("""
     <style>
-    [data-testid="stAppViewContainer"] { background-color: #111111; }
+    [data-testid="stAppViewContainer"] { background-color: #F5F0E8; }
+    [data-testid="stMain"] { background-color: #F5F0E8; }
+    .main .block-container { background-color: #F5F0E8; padding-top: 2rem; }
+
     [data-testid="stSidebar"] {
-        background-color: #1a1a1a;
+        background-color: #1a1a1a !important;
         border-right: 2px solid #FFD84D !important;
     }
-    [data-testid="stSidebar"] * { color: #cccccc !important; }
+    [data-testid="stSidebar"] p,
+    [data-testid="stSidebar"] span,
+    [data-testid="stSidebar"] label,
+    [data-testid="stSidebar"] div { color: #cccccc !important; }
     [data-testid="stSidebar"] .stRadio label {
-        color: #cccccc !important;
-        font-size: 13px !important;
+        color: #cccccc !important; font-size: 13px !important;
     }
     .stRadio > div { gap: 4px; }
-    p, li, span, div { color: #cccccc; }
-    h1, h2, h3, h4 { color: #ffffff !important; }
-    label { color: #cccccc !important; }
+
+    p, li { color: #1a1a1a; }
+    h1, h2, h3, h4 { color: #1a1a1a !important; }
+    label { color: #1a1a1a !important; }
+
     .stButton > button {
-        background: #FFD84D !important;
-        color: #1a1a1a !important;
-        border: none !important;
-        border-radius: 10px !important;
-        font-weight: 800 !important;
-        font-size: 14px !important;
+        background: #FFD84D !important; color: #1a1a1a !important;
+        border: none !important; border-radius: 10px !important;
+        font-weight: 800 !important; font-size: 14px !important;
         padding: 0.7rem 2rem !important;
     }
     .stButton > button:hover { background: #f5cc30 !important; }
     .stSlider > div > div { background: #FFD84D !important; }
     .stSelectbox > div > div {
-        background: #1a1a1a !important;
-        border: 1px solid #333 !important;
-        color: #fff !important;
-        border-radius: 8px !important;
+        background: #fff !important; border: 1px solid #ddd !important;
+        color: #1a1a1a !important; border-radius: 8px !important;
     }
     [data-testid="stFileUploader"] {
-        background: #1a1a1a !important;
-        border: 2px dashed #333 !important;
-        border-radius: 12px !important;
-        color: #ccc !important;
+        background: #fff !important; border: 2px dashed #ccc !important;
+        border-radius: 12px !important; color: #1a1a1a !important;
     }
     #MainMenu { visibility: hidden; }
     footer { visibility: hidden; }
