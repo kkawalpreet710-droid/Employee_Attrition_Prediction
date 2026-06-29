@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import io
-from utils.model import score_employee, get_risk_level
+from model import score_employee, get_risk_level
 
 SAMPLE_DATA = [
     {'EmployeeID':'EMP-001','Department':'Sales','JobRole':'Sales Representative','MonthlyIncome':3200,'OverTime':'Yes','BusinessTravel':'Travel_Frequently','YearsAtCompany':1,'YearsInCurrentRole':1,'YearsWithCurrManager':0,'MaritalStatus':'Single','WorkLifeBalance':1},
