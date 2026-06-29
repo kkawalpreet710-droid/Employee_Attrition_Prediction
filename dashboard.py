@@ -25,7 +25,7 @@ PLOT_LAYOUT = dict(
 def show():
     st.markdown("""
     <div style='margin-bottom:1.5rem;'>
-        <h1 style='font-size:1.6rem;font-weight:800;color:#fff;margin:0;'>
+        <h1 style='font-size:1.6rem;font-weight:800;color:#1a1a1a;margin:0;'>
             HR Attrition Dashboard
         </h1>
         <p style='font-size:11px;color:#555;margin-top:4px;'>
@@ -44,7 +44,7 @@ def show():
     for col, (label, val, sub, color) in zip([m1, m2, m3, m4], metrics):
         with col:
             st.markdown(f"""
-            <div style='background:#1a1a1a;border:1px solid #2a2a2a;
+            <div style='background:#fff;border:1px solid #e0d9ce;
                 border-radius:12px;padding:1rem 1.2rem;'>
                 <div style='font-size:10px;color:#555;text-transform:uppercase;
                     letter-spacing:1px;margin-bottom:6px;'>{label}</div>
@@ -57,10 +57,10 @@ def show():
     c1, c2 = st.columns(2)
 
     with c1:
-        st.markdown("""<div style='background:#1a1a1a;border:1px solid #2a2a2a;
+        st.markdown("""<div style='background:#fff;border:1px solid #e0d9ce;
             border-radius:12px;padding:1.2rem 1.4rem;'>
             <div style='font-size:11px;font-weight:700;text-transform:uppercase;
-                letter-spacing:1px;color:#fff;'>Attrition by Department</div>
+                letter-spacing:1px;color:#1a1a1a;'>Attrition by Department</div>
             <div style='font-size:10px;color:#555;margin-bottom:0.5rem;'>
                 % of employees who left per department</div>
         """, unsafe_allow_html=True)
@@ -83,10 +83,10 @@ def show():
         st.markdown("</div>", unsafe_allow_html=True)
 
     with c2:
-        st.markdown("""<div style='background:#1a1a1a;border:1px solid #2a2a2a;
+        st.markdown("""<div style='background:#fff;border:1px solid #e0d9ce;
             border-radius:12px;padding:1.2rem 1.4rem;'>
             <div style='font-size:11px;font-weight:700;text-transform:uppercase;
-                letter-spacing:1px;color:#fff;'>Monthly Income vs Attrition</div>
+                letter-spacing:1px;color:##1a1a1a;'>Monthly Income vs Attrition</div>
             <div style='font-size:10px;color:#555;margin-bottom:0.5rem;'>
                 Average income: stayed vs left</div>
         """, unsafe_allow_html=True)
@@ -113,10 +113,10 @@ def show():
     c3, c4 = st.columns(2)
 
     with c3:
-        st.markdown("""<div style='background:#1a1a1a;border:1px solid #2a2a2a;
+        st.markdown("""<div style='background:#fff;border:1px solid #e0d9ce;
             border-radius:12px;padding:1.2rem 1.4rem;'>
             <div style='font-size:11px;font-weight:700;text-transform:uppercase;
-                letter-spacing:1px;color:#fff;'>Attrition by Job Role</div>
+                letter-spacing:1px;color:##1a1a1a;'>Attrition by Job Role</div>
             <div style='font-size:10px;color:#555;margin-bottom:0.5rem;'>
                 Top roles by exit rate</div>
         """, unsafe_allow_html=True)
@@ -141,10 +141,10 @@ def show():
         st.markdown("</div>", unsafe_allow_html=True)
 
     with c4:
-        st.markdown("""<div style='background:#1a1a1a;border:1px solid #2a2a2a;
+        st.markdown("""<div style='background:#fff;border:1px solid #e0d9ce;
             border-radius:12px;padding:1.2rem 1.4rem;'>
             <div style='font-size:11px;font-weight:700;text-transform:uppercase;
-                letter-spacing:1px;color:#fff;'>Top 10 Risk Factors</div>
+                letter-spacing:1px;color:##1a1a1a;'>Top 10 Risk Factors</div>
             <div style='font-size:10px;color:#555;margin-bottom:0.8rem;'>
                 Feature importance from model coefficients</div>
         """, unsafe_allow_html=True)
@@ -178,10 +178,10 @@ def show():
 
     st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("""
-    <div style='background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;
+    <div style='background:#fff;border:1px solid #e0d9ce;border-radius:12px;
         padding:1.2rem 1.4rem;'>
         <div style='font-size:11px;font-weight:700;text-transform:uppercase;
-            letter-spacing:1px;color:#fff;margin-bottom:1rem;'>
+            letter-spacing:1px;color:##1a1a1a;margin-bottom:1rem;'>
             Model Comparison Results</div>
     """, unsafe_allow_html=True)
 
