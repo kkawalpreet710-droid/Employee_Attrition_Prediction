@@ -160,7 +160,7 @@ def show():
             return 'background:#0f2e1a;color:#4ade80;border-radius:4px;padding:2px 8px;'
 
         st.dataframe(
-            filtered.style.applymap(style_risk, subset=['Risk Level']),
+            filtered,
             use_container_width=True,
             hide_index=True,
             height=400
