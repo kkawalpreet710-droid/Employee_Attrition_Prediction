@@ -9,14 +9,14 @@ def show():
             AI-Powered HR Intelligence
         </div>
         <h1 style='font-size:3.5rem;font-weight:900;line-height:1.05;
-            letter-spacing:-2px;text-transform:uppercase;color:#fff;
+            letter-spacing:-2px;text-transform:uppercase;color:#1a1a1a;
             margin-bottom:1rem;'>
             PREDICT WHO LEAVES<br>
             <span style='background:#FFD84D;color:#1a1a1a;
                 padding:0 0.15em;border-radius:4px;'>BEFORE</span>
             THEY RESIGN
         </h1>
-        <p style='font-size:1.1rem;color:#666;max-width:500px;
+        <p style='font-size:1.1rem;color:#444;max-width:500px;
             margin:0 auto 2rem;line-height:1.6;'>
             Turn your HR data into actionable retention insights.
             Know which employees are at risk — weeks before they hand in their notice.
@@ -25,59 +25,42 @@ def show():
     """, unsafe_allow_html=True)
 
     c1, c2, c3, c4 = st.columns(4)
-    with c1:
-        st.markdown("""
-        <div style='background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;
-            padding:1.2rem;text-align:center;'>
-            <div style='font-size:28px;font-weight:800;color:#fff;'>1,470</div>
-            <div style='font-size:10px;color:#555;text-transform:uppercase;
-                letter-spacing:1px;margin-top:4px;'>Employees Analysed</div>
-        </div>""", unsafe_allow_html=True)
-    with c2:
-        st.markdown("""
-        <div style='background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;
-            padding:1.2rem;text-align:center;'>
-            <div style='font-size:28px;font-weight:800;color:#f87171;'>16.1%</div>
-            <div style='font-size:10px;color:#555;text-transform:uppercase;
-                letter-spacing:1px;margin-top:4px;'>Attrition Rate</div>
-        </div>""", unsafe_allow_html=True)
-    with c3:
-        st.markdown("""
-        <div style='background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;
-            padding:1.2rem;text-align:center;'>
-            <div style='font-size:28px;font-weight:800;color:#FFD84D;'>59%</div>
-            <div style='font-size:10px;color:#555;text-transform:uppercase;
-                letter-spacing:1px;margin-top:4px;'>Model Recall</div>
-        </div>""", unsafe_allow_html=True)
-    with c4:
-        st.markdown("""
-        <div style='background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;
-            padding:1.2rem;text-align:center;'>
-            <div style='font-size:28px;font-weight:800;color:#4ade80;'>3</div>
-            <div style='font-size:10px;color:#555;text-transform:uppercase;
-                letter-spacing:1px;margin-top:4px;'>Models Compared</div>
-        </div>""", unsafe_allow_html=True)
+    metrics = [
+        ("1,470", "Employees Analysed", "#fff"),
+        ("16.1%", "Attrition Rate", "#f87171"),
+        ("59%", "Model Recall", "#FFD84D"),
+        ("3", "Models Compared", "#4ade80"),
+    ]
+    for col, (val, label, color) in zip([c1, c2, c3, c4], metrics):
+        with col:
+            st.markdown(f"""
+            <div style='background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;
+                padding:1.2rem;text-align:center;'>
+                <div style='font-size:28px;font-weight:800;color:{color};'>{val}</div>
+                <div style='font-size:11px;color:#aaaaaa;text-transform:uppercase;
+                    letter-spacing:1px;margin-top:6px;'>{label}</div>
+            </div>""", unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown("""
     <div style='background:#FFD84D;border-radius:20px;padding:3rem 2.5rem;
-        display:flex;align-items:center;justify-content:space-between;
-        flex-wrap:wrap;gap:2rem;margin-bottom:1.5rem;'>
-        <div>
-            <div style='font-size:10px;font-weight:700;letter-spacing:2px;
-                text-transform:uppercase;color:#8a7200;margin-bottom:0.5rem;'>
-                What you get
-            </div>
+        margin-bottom:1.5rem;'>
+        <div style='font-size:10px;font-weight:700;letter-spacing:2px;
+            text-transform:uppercase;color:#8a7200;margin-bottom:0.5rem;'>
+            What you get
+        </div>
+        <div style='display:flex;justify-content:space-between;
+            align-items:center;flex-wrap:wrap;gap:2rem;'>
             <h2 style='font-size:2rem;font-weight:900;text-transform:uppercase;
                 color:#1a1a1a;line-height:1.1;margin:0;'>
                 SEE THE RISK.<br>ACT BEFORE<br>IT'S TOO LATE.
             </h2>
-        </div>
-        <div style='font-size:13px;color:#5a4a00;max-width:320px;line-height:1.8;'>
-            Our Logistic Regression model — trained on IBM HR data — identifies
-            the employees most likely to leave based on 10+ behavioural and
-            structural factors. Use the sidebar to explore.
+            <div style='font-size:13px;color:#333;max-width:320px;line-height:1.8;'>
+                Our Logistic Regression model — trained on IBM HR data — identifies
+                the employees most likely to leave based on 10+ behavioural and
+                structural factors. Use the sidebar to explore.
+            </div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -93,23 +76,23 @@ def show():
         with col:
             st.markdown(f"""
             <div style='background:#1a1a1a;border:1px solid #2a2a2a;border-radius:14px;
-                padding:1.4rem;height:160px;'>
+                padding:1.4rem;height:170px;'>
                 <div style='font-size:24px;margin-bottom:0.6rem;'>{icon}</div>
-                <div style='font-size:12px;font-weight:700;color:#fff;
+                <div style='font-size:12px;font-weight:700;color:#ffffff;
                     text-transform:uppercase;letter-spacing:0.5px;
                     margin-bottom:0.4rem;'>{title}</div>
-                <div style='font-size:11px;color:#666;line-height:1.5;'>{desc}</div>
+                <div style='font-size:11px;color:#aaaaaa;line-height:1.5;'>{desc}</div>
             </div>""", unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown("""
-    <div style='background:#1a1a1a;border:1px solid #2a2a2a;border-radius:16px;
-        padding:2rem 2.5rem;'>
+    <div style='background:#1a1a1a;border-radius:16px;padding:2rem 2.5rem;'>
         <div style='font-size:10px;color:#FFD84D;text-transform:uppercase;
-            letter-spacing:2px;margin-bottom:0.5rem;'>How it works</div>
+            letter-spacing:2px;margin-bottom:0.5rem;font-weight:700;'>How it works</div>
         <h3 style='font-size:1.4rem;font-weight:900;text-transform:uppercase;
-            color:#fff;margin-bottom:1.5rem;'>THREE STEPS. ZERO GUESSWORK.</h3>
+            color:#ffffff;margin-bottom:1.5rem;'>THREE STEPS. ZERO GUESSWORK.</h3>
+    </div>
     """, unsafe_allow_html=True)
 
     s1, s2, s3 = st.columns(3)
@@ -121,21 +104,20 @@ def show():
     for col, (num, title, desc) in zip([s1, s2, s3], steps):
         with col:
             st.markdown(f"""
-            <div style='border-top:2px solid #FFD84D;padding-top:1rem;'>
+            <div style='background:#1a1a1a;border-top:2px solid #FFD84D;
+                border-radius:0 0 12px 12px;padding:1.2rem;'>
                 <div style='font-size:11px;color:#FFD84D;font-weight:700;
                     margin-bottom:0.4rem;'>{num}</div>
-                <div style='font-size:13px;font-weight:700;color:#fff;
+                <div style='font-size:13px;font-weight:700;color:#ffffff;
                     text-transform:uppercase;margin-bottom:0.4rem;'>{title}</div>
-                <div style='font-size:11px;color:#666;line-height:1.5;'>{desc}</div>
+                <div style='font-size:11px;color:#aaaaaa;line-height:1.5;'>{desc}</div>
             </div>""", unsafe_allow_html=True)
-
-    st.markdown("</div>", unsafe_allow_html=True)
 
     st.markdown("<br><br>", unsafe_allow_html=True)
     st.markdown("""
     <div style='text-align:center;padding:2rem;'>
         <h2 style='font-size:2.5rem;font-weight:900;text-transform:uppercase;
-            color:#fff;margin-bottom:0.5rem;'>STOP LOSING GREAT PEOPLE.</h2>
-        <p style='color:#555;'>Use the sidebar to open the Dashboard or start predicting.</p>
+            color:#1a1a1a;margin-bottom:0.5rem;'>STOP LOSING GREAT PEOPLE.</h2>
+        <p style='color:#444;'>Use the sidebar to open the Dashboard or start predicting.</p>
     </div>
     """, unsafe_allow_html=True)
