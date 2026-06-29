@@ -1,5 +1,5 @@
 import streamlit as st
-from utils.model import score_employee, get_risk_level, get_drivers, get_recommendation
+from model import score_employee, get_risk_level, get_drivers, get_recommendation
 
 def show():
     st.markdown("""
