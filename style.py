@@ -21,6 +21,9 @@ def load_css():
     .stRadio > div { gap: 4px; }
 
     p, li { color: #1a1a1a; }
+    div[style*="color:#555"] { color: #aaaaaa !important; }
+    div[style*="color:#666"] { color: #aaaaaa !important; }
+    div[style*="color:#444"] { color: #aaaaaa !important; }
     h1, h2, h3, h4 { color: #1a1a1a !important; }
     label { color: #1a1a1a !important; }
 
