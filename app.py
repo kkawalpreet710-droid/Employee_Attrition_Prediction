@@ -7,7 +7,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-from pages import landing, dashboard, predict, bulk_upload
+from views import landing, dashboard, predict, bulk_upload
 from utils.style import load_css
 
 load_css()
